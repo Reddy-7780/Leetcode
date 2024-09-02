@@ -1,0 +1,12 @@
+class Solution {
+    public int generateKey(int num1, int num2, int num3) {
+        int ans=0;
+        for(int i=1000;i>=1;i/=10){
+            ans+=Math.min(Math.min(num1/i,num2/i),num3/i)*i;
+            num1%=i;
+            num2%=i;
+            num3%=i;
+        }
+        return ans;
+    }
+}
