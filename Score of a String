@@ -1,0 +1,13 @@
+class Solution {
+    public int scoreOfString(String s) {
+        int ans=0;
+        for(int i=1;i<s.length();i++){
+            char ch1 =s.charAt(i);
+            char ch2=s.charAt(i-1);
+            int f=(int)ch1;
+            int sec=(int)ch2;
+            ans+=Math.abs(f-sec);
+        }
+        return ans;
+    }
+}
